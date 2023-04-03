@@ -1,19 +1,19 @@
 class Triangle {
 
-    constructor (pointA, pointB, pointC) {
+    constructor(pointA, pointB, pointC) {
         this.pointA = pointA;
         this.pointB = pointB;
         this.pointC = pointC;
     };
 
-    static createNewTriangle (xA, yA, xB, yB, xC, yC) {
-        const pointA = new Point (xA, yA);
-        const pointB = new Point (xB, yB);
-        const pointC = new Point (xC, yC);
-        return new Triangle (pointA, pointB, pointC);
+    static createNewTriangle(xA, yA, xB, yB, xC, yC) {
+        const pointA = new Point(xA, yA);
+        const pointB = new Point(xB, yB);
+        const pointC = new Point(xC, yC);
+        return new Triangle(pointA, pointB, pointC);
     };
 
-    get perimeter () {
+    get perimeter() {
         const segment1 = new Segment(this.pointA, this.pointB);
         const segment2 = new Segment(this.pointB, this.pointC);
         const segment3 = new Segment(this.pointC, this.pointA);
@@ -21,7 +21,7 @@ class Triangle {
         return perimeter;
     };
 
-    get area () {
+    get area() {
         const segment1 = new Segment(this.pointA, this.pointB);
         const segment2 = new Segment(this.pointB, this.pointC);
         const segment3 = new Segment(this.pointC, this.pointA);

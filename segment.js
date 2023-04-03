@@ -3,7 +3,7 @@ class Segment {
 // In questo modo creiamo i segmenti inserendo i punti come parametri, e questi
 // ultimi vengono creati a parte tramite la class Point:
 
-    constructor (pointA, pointB) {
+    constructor(pointA, pointB) {
         this.pointA = pointA;
         this.pointB = pointB;
     };
@@ -13,15 +13,15 @@ class Segment {
 // In questo modi si può ottenere i segmenti senza ogni volta dover
 // scrivere i punti nel file a parte:    
 
-    static fromPointsCoordinates (xA, yA, xB, yB) {
-        const pointA = new Point (xA, yA);
-        const pointB = new Point (xB, yB);
-        return new Segment (pointA, pointB);
+    static fromPointsCoordinates(xA, yA, xB, yB) {
+        const pointA = new Point(xA, yA);
+        const pointB = new Point(xB, yB);
+        return new Segment(pointA, pointB);
     };
 
 // Lunghezza = radice quadrata di: (x1-x2)**2 + (y1-y2)**2! teorema di Pitagora
 
-    calculateLength (params) {
+    get length() {
         const deltaX = this.pointA.x - this.pointB.x;
         const deltaY = this.pointA.y - this.pointB.y;
         const squareDX = deltaX ** 2;
