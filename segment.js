@@ -8,12 +8,12 @@ class Segment {
         this.pointB = pointB;
     };
 
-// Qua sotto creiamo una "factory", cioè una funzione (in questo caso statica) che
-// crea essa stessa i segmenti in base ai parametri inseriti.
+// Qua sotto creiamo una "factory", cioè una funzione (in questo caso statica)
+// che crea essa stessa i segmenti in base ai parametri inseriti.
 // In questo modi si può ottenere i segmenti senza ogni volta dover
 // scrivere i punti nel file a parte:    
 
-    static fromPointsCoodinates (xA, yA, xB, yB) {
+    static fromPointsCoordinates (xA, yA, xB, yB) {
         const pointA = new Point (xA, yA);
         const pointB = new Point (xB, yB);
         return new Segment (pointA, pointB);
